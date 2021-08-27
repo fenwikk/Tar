@@ -2,7 +2,7 @@ package embed
 
 import (
 	"github.com/bwmarrin/discordgo"
-	"github.com/fenwikk/Tar/scp"
+	"github.com/fenwikk/scp"
 )
 
 func Edit(ctx *scp.Ctx) {

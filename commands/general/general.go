@@ -2,7 +2,7 @@ package general
 
 import (
 	"github.com/fenwikk/Tar/commands/general/info"
-	"github.com/fenwikk/Tar/scp"
+	"github.com/fenwikk/scp"
 )
 
 var Category = &scp.Category{

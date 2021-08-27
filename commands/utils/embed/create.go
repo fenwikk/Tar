@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/fenwikk/Tar/scp"
+	"github.com/fenwikk/scp"
 )
 
 func CreateEmbed(ctx *scp.Ctx) {

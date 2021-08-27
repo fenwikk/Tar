@@ -2,7 +2,7 @@ package utils
 
 import (
 	"github.com/fenwikk/Tar/commands/utils/embed"
-	"github.com/fenwikk/Tar/scp"
+	"github.com/fenwikk/scp"
 )
 
 var Category = &scp.Category{

@@ -2,7 +2,7 @@ package info
 
 import (
 	"github.com/bwmarrin/discordgo"
-	"github.com/fenwikk/Tar/scp"
+	"github.com/fenwikk/scp"
 )
 
 var Command = &scp.Command{

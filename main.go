@@ -9,7 +9,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 	"github.com/fenwikk/Tar/commands/general"
 	"github.com/fenwikk/Tar/commands/utils"
-	"github.com/fenwikk/Tar/scp"
+	"github.com/fenwikk/scp"
 )
 
 // Bot parameters
@@ -32,7 +32,7 @@ func main() {
 		log.Fatalf("Invalid bot parameters: %v", err)
 	}
 
-	router := scp.Create()
+	router := scp.Create(s)
 
 	s.AddHandler(func(s *discordgo.Session, r *discordgo.Ready) {
 		log.Println("Bot ready")
@@ -45,11 +45,7 @@ func main() {
 	router.AddCategory(general.Category)
 	router.AddCategory(utils.Category)
 
-	router.RegisterAllCommands(s, *GuildID)
-
-	s.AddHandler(func(s *discordgo.Session, g *discordgo.GuildCreate) {
-		router.RegisterAllCommands(s, *GuildID)
-	})
+	router.RegisterAllCommands(*GuildID)
 
 	defer s.Close()
 
